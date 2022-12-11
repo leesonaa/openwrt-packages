@@ -48,8 +48,6 @@ sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 # 关机
 git_clone https://github.com/esirplayground/luci-app-poweroff
 
-# SSR-Plus
-git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-ssr-plus
 
 # bypass
 git_clone https://github.com/kiddin9/openwrt-bypass
@@ -67,7 +65,13 @@ svn_co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
 
 # HelloWorld 依赖
 git_clone https://github.com/fw876/helloworld
-
+svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+svn export https://github.com/fw876/helloworld/trunk/lua-neturl
+svn export https://github.com/fw876/helloworld/trunk/naiveproxy
+svn export https://github.com/fw876/helloworld/trunk/sagernet-core
+svn export https://github.com/fw876/helloworld/trunk/tcping
+svn export https://github.com/fw876/helloworld/trunk/redsocks2
+svn export https://github.com/fw876/helloworld/trunk/microsocks
 
 # HelloWorld  # 依赖 helloworld 和 openwrt-passwall
 git_clone https://github.com/jerrykuku/lua-maxminddb
