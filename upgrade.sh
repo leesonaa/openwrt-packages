@@ -48,6 +48,8 @@ sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 # 关机
 git_clone https://github.com/esirplayground/luci-app-poweroff
 
+# SSR-Plus
+git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-ssr-plus
 
 # bypass
 git_clone https://github.com/kiddin9/openwrt-bypass
