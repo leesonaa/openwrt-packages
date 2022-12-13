@@ -3,7 +3,7 @@
 
 ## 使用
 ```
-sed -i '$a src-git ing https://github.com/wjz304/openwrt-packages' feeds.conf.default
+sed -i '$a src-git ing https://github.com/leesonaa/openwrt-packages' feeds.conf.default
 ./scripts/feeds clean
 ./scripts/feeds update -a
 ./scripts/feeds install -a
