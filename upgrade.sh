@@ -44,6 +44,9 @@ git_clone https://github.com/jerrykuku/luci-app-argon-config
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 #sed -i 's/\"Argon 主题设置\"/\"主题设置\"/g' luci-app-argon-config/po/zh-cn/argon-config.po
 
+# Argoone 主题
+git clone --depth 1 https://github.com/kenzok78/luci-theme-argonne
+git clone --depth 1 https://github.com/kenzok78/luci-app-argonne-config
 
 # 关机
 git_clone https://github.com/esirplayground/luci-app-poweroff
