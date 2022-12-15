@@ -45,7 +45,7 @@ sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 #sed -i 's/\"Argon 主题设置\"/\"主题设置\"/g' luci-app-argon-config/po/zh-cn/argon-config.po
 
 # Argoone 主题
-git clone --depth 1 https://github.com/kenzok78/luci-theme-argonne
+git_clone_b https://github.com/kenzok78/luci-theme-argonne 21.02
 git clone --depth 1 https://github.com/kenzok78/luci-app-argonne-config
 
 # 关机
@@ -68,13 +68,7 @@ svn_co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
 
 # HelloWorld 依赖
 git_clone https://github.com/fw876/helloworld
-svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-svn export https://github.com/fw876/helloworld/trunk/lua-neturl
-svn export https://github.com/fw876/helloworld/trunk/naiveproxy
-svn export https://github.com/fw876/helloworld/trunk/sagernet-core
-svn export https://github.com/fw876/helloworld/trunk/tcping
-svn export https://github.com/fw876/helloworld/trunk/redsocks2
-svn export https://github.com/fw876/helloworld/trunk/microsocks
+
 
 # HelloWorld  # 依赖 helloworld 和 openwrt-passwall
 git_clone https://github.com/jerrykuku/lua-maxminddb
