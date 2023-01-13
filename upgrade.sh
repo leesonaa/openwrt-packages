@@ -34,8 +34,7 @@ function svn_co() {
   rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
 }
 
-# 流量监控
-git_clone https://github.com/brvphoenix/luci-app-wrtbwmon
+
 
 
 # Argon 主题
