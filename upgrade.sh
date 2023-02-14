@@ -34,8 +34,7 @@ function svn_co() {
   rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
 }
 
-# cifs-mount挂载smb
-git_clone https://github.com/krystic/luci-app-cifs-mount
+
 
 # DDNS-GO
 git_clone https://github.com/sirpdboy/luci-app-ddns-go
