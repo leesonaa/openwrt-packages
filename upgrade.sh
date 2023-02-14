@@ -34,7 +34,11 @@ function svn_co() {
   rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
 }
 
+# DDNS-GO
+git_clone https://github.com/sirpdboy/luci-app-ddns-go
 
+# 一键自动格式化分区、扩容、自动挂载插件
+git_clone https://github.com/sirpdboy/luci-app-partexp
 
 
 # Argon 主题
