@@ -40,6 +40,11 @@ function svn_co() {
 #svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
 #svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
 
+
+# lucky
+git_clone https://github.com/sirpdboy/luci-app-lucky
+#和DDNS-GO只能选择其中的一个？
+
 # DDNS-GO
 git_clone https://github.com/sirpdboy/luci-app-ddns-go
 
