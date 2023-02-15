@@ -155,6 +155,7 @@ sed -i 's/"vpn"/"services"/g; s/"VPN"/"Services"/g' luci-app-zerotier/luasrc/con
 
 # Tailscale
 git_clone https://github.com/MoZhonghua/openwrt-tailscale
+git clone -b https://github.com/kuoruan/openwrt-upx.git package/openwrt-upx
 
 
 # IPv6 端口转发
