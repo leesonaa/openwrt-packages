@@ -35,6 +35,10 @@ function svn_co() {
 }
 
 
+# test docker & dockerman
+# svn co/export 需要trunk
+svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
+svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
 
 # DDNS-GO
 git_clone https://github.com/sirpdboy/luci-app-ddns-go
