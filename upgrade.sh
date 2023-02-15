@@ -37,8 +37,8 @@ function svn_co() {
 
 # test docker & dockerman
 # svn co/export 需要trunk
-svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
-svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
+#svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
+#svn_co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
 
 # DDNS-GO
 git_clone https://github.com/sirpdboy/luci-app-ddns-go
@@ -137,7 +137,7 @@ sed -i 's/"control"/"system"/g; s/"Timing setting"/"定时任务"/g' luci-app-re
 
 
 # 应用过滤
-git_clone https://github.com/destan19/OpenAppFilter
+#git_clone https://github.com/destan19/OpenAppFilter
 
 
 # 网速测试
