@@ -137,7 +137,7 @@ sed -i 's/"control"/"system"/g; s/"Timing setting"/"定时任务"/g' luci-app-re
 
 
 # 应用过滤
-#git_clone https://github.com/destan19/OpenAppFilter
+git_clone https://github.com/destan19/OpenAppFilter
 
 
 # 网速测试
