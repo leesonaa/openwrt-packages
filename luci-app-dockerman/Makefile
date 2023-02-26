@@ -28,6 +28,6 @@ uci add_list dockerd.dockerman.ac_allowed_interface='br-lan'
 uci commit dockerd
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
