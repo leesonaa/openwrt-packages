@@ -37,10 +37,11 @@ function svn_co() {
 
 # test docker & dockerman
 # svn co/export 需要trunk
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
-sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-docker/Makefile
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman luci-app-dockerman
-sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-dockerman/Makefile
+#svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
+#sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-docker/Makefile
+#svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
+#sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-dockerman/Makefile
+svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
 
 
 # lucky
