@@ -36,13 +36,13 @@ function svn_co() {
 
 
 # unraid icons
-svn co https://github.com/xushier/HD-Icons/trunk/border-radius /icons
+#svn co https://github.com/xushier/HD-Icons/trunk/border-radius /icons
 # circle
-svn_co https://github.com/xushier/HD-Icons/trunk/circle /icons
+#svn_co https://github.com/xushier/HD-Icons/trunk/circle /icons
 # png
-svn co https://github.com/walkxcode/dashboard-icons/trunk/png /icons
+#svn co https://github.com/walkxcode/dashboard-icons/trunk/png /icons
 #svg
-svn co https://github.com/walkxcode/dashboard-icons/trunk/svg /icons
+#svn co https://github.com/walkxcode/dashboard-icons/trunk/svg /icons
 
 
 # test docker & dockerman
@@ -162,7 +162,7 @@ git_clone https://github.com/destan19/OpenAppFilter
 
 # 网速测试
 git_clone https://github.com/sirpdboy/netspeedtest
-sed -i 's/DEPENDS:=\$(GO_ARCH_DEPENDS)$/DEPENDS:=\$(GO_ARCH_DEPENDS) +upx/g' netspeedtest/speedtest-web/Makefile
+#sed -i 's/DEPENDS:=\$(GO_ARCH_DEPENDS)$/DEPENDS:=\$(GO_ARCH_DEPENDS) +upx /g' netspeedtest/homebox/Makefile
 
 # 全能推送
 git_clone https://github.com/zzsj0928/luci-app-pushbot
