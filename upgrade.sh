@@ -44,9 +44,8 @@ function svn_co() {
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
 
 
-# lucky
-#git_clone https://github.com/sirpdboy/luci-app-lucky
-#和DDNS-GO只能选择其中的一个？
+
+# gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
 sed -i 's/#LUCI_DEPENDS:=+lucky/LUCI_DEPENDS:=+lucky/g' luci-app-lucky/luci-app-lucky/Makefile
 
