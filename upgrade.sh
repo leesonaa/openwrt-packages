@@ -67,15 +67,16 @@ sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 
 # Argoone 主题
 git_clone_b https://github.com/kenzok78/luci-theme-argonne 21.02
-git clone https://github.com/kenzok78/luci-app-argonne-config
+git_clone https://github.com/kenzok78/luci-app-argonne-config
 
 # 关机
 git_clone https://github.com/esirplayground/luci-app-poweroff
 
 
 # bypass
-git_clone https://github.com/kiddin9/openwrt-bypass
-sed -i 's/luci-lib-ipkg/luci-base/g' openwrt-bypass/luci-app-bypass/Makefile
+#git_clone https://github.com/kiddin9/openwrt-bypass
+#sed -i 's/luci-lib-ipkg/luci-base/g' openwrt-bypass/luci-app-bypass/Makefile
+#删库了？
 
 # openwrt-passwall 依赖
 git_clone https://github.com/xiaorouji/openwrt-passwall
