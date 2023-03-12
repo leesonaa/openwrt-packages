@@ -36,13 +36,13 @@ function svn_co() {
 
 
 # unraid icons
-svn_co https://github.com/xushier/HD-Icons/trunk/border-radius /icons
+svn co https://github.com/xushier/HD-Icons/trunk/border-radius /icons
 # circle
 svn_co https://github.com/xushier/HD-Icons/trunk/circle /icons
 # png
-svn_co https://github.com/walkxcode/dashboard-icons/trunk/png /icons
+svn co https://github.com/walkxcode/dashboard-icons/trunk/png /icons
 #svg
-svn_co https://github.com/walkxcode/dashboard-icons/trunk/svg /icons
+svn co https://github.com/walkxcode/dashboard-icons/trunk/svg /icons
 
 
 # test docker & dockerman
