@@ -45,8 +45,9 @@ svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
 
 
 # lucky
-git_clone https://github.com/sirpdboy/luci-app-lucky
+#git_clone https://github.com/sirpdboy/luci-app-lucky
 #和DDNS-GO只能选择其中的一个？
+git_clone https://github.com/gdy666/luci-app-lucky
 
 # DDNS-GO
 git_clone https://github.com/sirpdboy/luci-app-ddns-go
