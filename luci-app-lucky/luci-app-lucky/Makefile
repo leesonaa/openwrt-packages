@@ -11,7 +11,7 @@ PKG_VERSION:=1.2.3
 PKG_RELEASE:=5
 
 LUCI_TITLE:=LuCI Support for  lucky 
-#LUCI_DEPENDS:=+lucky
+LUCI_DEPENDS:=+lucky
 LUCI_PKGARCH:=all
 
 include $(TOPDIR)/feeds/luci/luci.mk
