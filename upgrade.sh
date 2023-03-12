@@ -35,6 +35,16 @@ function svn_co() {
 }
 
 
+# unraid icons
+svn_co https://github.com/xushier/HD-Icons/trunk/border-radius /icons
+# circle
+svn_co https://github.com/xushier/HD-Icons/trunk/circle /icons
+# png
+svn_co https://github.com/walkxcode/dashboard-icons/trunk/png /icons
+#svg
+svn_co https://github.com/walkxcode/dashboard-icons/trunk/svg /icons
+
+
 # test docker & dockerman
 # svn co/export 需要trunk
 #svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-docker
