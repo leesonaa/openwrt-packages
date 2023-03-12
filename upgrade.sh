@@ -41,7 +41,7 @@ function svn_co() {
 #sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-docker/Makefile
 #svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
 #sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-dockerman/Makefile
-svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
+svn_co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
 
 
 
