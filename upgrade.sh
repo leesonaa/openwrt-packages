@@ -51,7 +51,8 @@ function svn_co() {
 #sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-docker/Makefile
 #svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
 #sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-dockerman/Makefile
-svn_co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
+#svn_co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
+#22.03 不用这个 21.02需要
 
 
 
@@ -162,7 +163,7 @@ git_clone https://github.com/destan19/OpenAppFilter
 
 # 网速测试
 git_clone https://github.com/sirpdboy/netspeedtest
-#sed -i 's/DEPENDS:=\$(GO_ARCH_DEPENDS)$/DEPENDS:=\$(GO_ARCH_DEPENDS) +upx /g' netspeedtest/homebox/Makefile
+#sed -i 's/DEPENDS:=\$(GO_ARCH_DEPENDS)$/DEPENDS:=\$(GO_ARCH_DEPENDS) /g' netspeedtest/homebox/Makefile
 
 # 全能推送
 git_clone https://github.com/zzsj0928/luci-app-pushbot
