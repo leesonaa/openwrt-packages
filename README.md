@@ -14,6 +14,9 @@ make menuconfig
 
 ## 本仓库集成的各插件原库
 
+### design 主题 
+https://github.com/gngpp/luci-app-design-config.git
+
 ### 古大羊lucky集成域名解析,反向代理,穿透,转发等
 https://github.com/gdy666/luci-app-lucky
 
