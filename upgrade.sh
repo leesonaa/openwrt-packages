@@ -54,7 +54,8 @@ function svn_co() {
 #svn_co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-dockerman
 #22.03 不用这个 21.02需要
 
-
+# gngpp/luci-theme-design 主题
+git_clone_b https://github.com/gngpp/luci-theme-design js
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
