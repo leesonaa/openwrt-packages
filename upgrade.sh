@@ -56,6 +56,7 @@ function svn_co() {
 
 # gngpp/luci-theme-design 主题
 git_clone_b https://github.com/gngpp/luci-theme-design js
+git_clone https://github.com/gngpp/luci-app-design-config
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
