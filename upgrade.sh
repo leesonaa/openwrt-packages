@@ -58,6 +58,9 @@ function svn_co() {
 #git_clone_b https://github.com/gngpp/luci-theme-design js
 #git_clone https://github.com/gngpp/luci-app-design-config
 
+# nas-packages istoreos
+svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-istorex
+
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
 sed -i 's/#LUCI_DEPENDS:=+lucky/LUCI_DEPENDS:=+lucky/g' luci-app-lucky/luci-app-lucky/Makefile
