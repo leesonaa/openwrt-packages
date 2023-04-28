@@ -55,8 +55,8 @@ function svn_co() {
 #22.03 不用这个 21.02需要
 
 # gngpp/luci-theme-design 主题
-git_clone_b https://github.com/gngpp/luci-theme-design js
-git_clone https://github.com/gngpp/luci-app-design-config
+#git_clone_b https://github.com/gngpp/luci-theme-design js
+#git_clone https://github.com/gngpp/luci-app-design-config
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
