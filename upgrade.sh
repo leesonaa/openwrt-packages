@@ -105,12 +105,12 @@ svn_co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
 
 
 # HelloWorld 依赖
-git_clone https://github.com/fw876/helloworld
+git_clone_b https://github.com/fw876/helloworld main
 
 
 # HelloWorld  # 依赖 helloworld 和 openwrt-passwall
-git_clone https://github.com/jerrykuku/lua-maxminddb
-git_clone https://github.com/jerrykuku/luci-app-vssr
+# git_clone https://github.com/jerrykuku/lua-maxminddb
+# git_clone https://github.com/jerrykuku/luci-app-vssr
 
 
 # OpenClash
