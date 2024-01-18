@@ -27,13 +27,6 @@ function git_clone_b() {
   rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
 }
 
-function svn_co() {
-  rm -rf $(basename $1 .git)
-  svn co $1 $(basename $1 .git) || true
-  # sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' $(basename $1 .git)/Makefile
-  rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
-}
-
 function svn_export() {
 	# 参数1是分支名, 参数2是子目录, 参数3是目标目录, 参数4仓库地址
 	trap 'rm -rf "$TMP_DIR"' 0 1 2 3
@@ -71,7 +64,7 @@ function svn_export() {
 #git_clone https://github.com/gngpp/luci-app-design-config
 
 # nas-packages istoreos
-svn_export "main" "luci" "luci/luci-app-istorex" "https://github.com/linkease/nas-packages-luci"
+svn_export "main" "luci/luci-app-istorex" "openwrt-packages"  "https://github.com/linkease/nas-packages-luci"
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
