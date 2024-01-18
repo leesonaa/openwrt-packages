@@ -63,8 +63,8 @@ function svn_export() {
 #git_clone_b https://github.com/gngpp/luci-theme-design js
 #git_clone https://github.com/gngpp/luci-app-design-config
 
-# nas-packages istoreos
-svn_export "main" "luci/luci-app-istorex" "luci-app-istorex"  "https://github.com/linkease/nas-packages-luci"
+# nas-packages istoreosx
+svn_export "main" "luci/luci-app-istorex" "luci-app-istorex" "https://github.com/linkease/nas-packages-luci"
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
@@ -87,7 +87,7 @@ sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 #sed -i 's/\"Argon 主题设置\"/\"主题设置\"/g' luci-app-argon-config/po/zh-cn/argon-config.po
 
 # Argoone 主题
-git_clone_b https://github.com/kenzok78/luci-theme-argonne 21.02
+git_clone_b https://github.com/kenzok78/luci-theme-argonne 23
 git_clone https://github.com/kenzok78/luci-app-argonne-config
 
 # 关机
@@ -148,8 +148,9 @@ sed -i 's/luci-lib-ipkg/luci-base/g' luci-app-store/Makefile
 
 
 # 网络向导
-svn_co https://github.com/linkease/nas-packages/trunk/network/services/quickstart
-svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart
+#svn_co https://github.com/linkease/nas-packages/trunk/network/services/quickstart
+#svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart
+svn_export "main" "luci/luci-app-quickstart" "luci-app-quickstart" "https://github.com/linkease/nas-packages-luci"
 sed -i 's/ +luci-app-store//g' luci-app-quickstart/Makefile
 
 
