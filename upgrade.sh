@@ -71,7 +71,7 @@ function svn_export() {
 #git_clone https://github.com/gngpp/luci-app-design-config
 
 # nas-packages istoreos
-svn_export "main" "luci/luci-app-istorex" "." "https://github.com/linkease/nas-packages-luci"
+svn_export "main" "luci" "luci/luci-app-istorex" "https://github.com/linkease/nas-packages-luci"
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
@@ -107,13 +107,13 @@ git_clone https://github.com/esirplayground/luci-app-poweroff
 #删库了？
 
 # openwrt-passwall 依赖
-git_clone https://github.com/xiaorouji/openwrt-passwall
+#git_clone https://github.com/xiaorouji/openwrt-passwall
 
 # Passwall  # 依赖 openwrt-passwall
-svn_co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall
+#svn_co https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall
 
 # Passwall2  # 依赖 openwrt-passwall
-svn_co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
+#svn_co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2
 
 
 # HelloWorld 依赖
@@ -206,8 +206,8 @@ git_clone https://github.com/NateLol/luci-app-beardropper
 
 
 # IP限速
-svn_co https://github.com/immortalwrt/luci/trunk/applications/luci-app-eqos
-sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-eqos/Makefile
+#svn_co https://github.com/immortalwrt/luci/trunk/applications/luci-app-eqos
+#sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-eqos/Makefile
 
 
 # 文件浏览器
@@ -217,10 +217,10 @@ cp -rf luci-app-filebrowser/po/zh_Hans/* luci-app-filebrowser/po/zh_cn
 
 
 # gowebdav
-svn_co https://github.com/immortalwrt/packages/trunk/net/gowebdav
-sed -i 's/..\/..\/lang\/golang\/golang-package.mk/$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g' gowebdav/Makefile
-svn_co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav
-sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-gowebdav/Makefile
+#svn_co https://github.com/immortalwrt/packages/trunk/net/gowebdav
+#sed -i 's/..\/..\/lang\/golang\/golang-package.mk/$(TOPDIR)\/feeds\/packages\/lang\/golang\/golang-package.mk/g' gowebdav/Makefile
+#svn_co https://github.com/immortalwrt/luci/trunk/applications/luci-app-gowebdav
+#sed -i 's/..\/..\/luci.mk/$(TOPDIR)\/feeds\/luci\/luci.mk/g' luci-app-gowebdav/Makefile
 #sed -i '/"NAS"/d; /page/d' luci-app-gowebdav/luasrc/controller/gowebdav.lua
 #sed -i 's/\"nas\"/\"services\"/g' luci-app-gowebdav/luasrc/controller/gowebdav.lua
 
