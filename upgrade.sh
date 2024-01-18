@@ -34,6 +34,18 @@ function svn_co() {
   rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
 }
 
+function svn_export() {
+	# 参数1是分支名, 参数2是子目录, 参数3是目标目录, 参数4仓库地址
+	trap 'rm -rf "$TMP_DIR"' 0 1 2 3
+	TMP_DIR="$(mktemp -d)" || exit 1
+	[ -d "$3" ] || mkdir -p "$3"
+	TGT_DIR="$(cd "$3"; pwd)"
+	cd "$TMP_DIR" && \
+	git init >/dev/null 2>&1 && \
+	git remote add -f origin "$4" >/dev/null 2>&1 && \
+	git checkout "remotes/origin/$1" -- "$2" && \
+	cd "$2" && cp -a . "$TGT_DIR/"
+}
 
 # unraid icons
 #svn co https://github.com/xushier/HD-Icons/trunk/border-radius icons
@@ -59,7 +71,7 @@ function svn_co() {
 #git_clone https://github.com/gngpp/luci-app-design-config
 
 # nas-packages istoreos
-svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-istorex
+svn_export "main" "luci/luci-app-istorex" "." "https://github.com/linkease/nas-packages-luci"
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
