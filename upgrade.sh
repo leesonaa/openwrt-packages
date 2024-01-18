@@ -64,7 +64,7 @@ function svn_export() {
 #git_clone https://github.com/gngpp/luci-app-design-config
 
 # nas-packages istoreos
-svn_export "main" "luci/luci-app-istorex" "openwrt-packages"  "https://github.com/linkease/nas-packages-luci"
+svn_export "main" "luci/luci-app-istorex" "luci-app-istorex"  "https://github.com/linkease/nas-packages-luci"
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
