@@ -67,7 +67,7 @@ rm -rf $localdir
 # 网络向导
 #svn_co https://github.com/linkease/nas-packages/trunk/network/services/quickstart
 #svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart
-git_sparse_clone main https://github.com/linkease/nas-packages-luci  istore luci/luci-app-ddnsto luci/luci-app-istorex
+git_sparse_clone main https://github.com/linkease/nas-packages-luci  istore luci/luci-app-quickstart luci/luci-app-istorex
 sed -i 's/ +luci-app-store//g' luci-app-quickstart/Makefile
 
 # gdy666/lucky
