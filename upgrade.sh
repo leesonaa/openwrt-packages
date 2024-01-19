@@ -27,18 +27,18 @@ function git_clone_b() {
   rm -rf $(basename $1 .git)/.svn* $(basename $1 .git)/.git*
 }
 
-function svn_export() {
-	# 参数1是分支名, 参数2是子目录, 参数3是目标目录, 参数4仓库地址
-	trap 'rm -rf "$TMP_DIR"' 0 1 2 3
-	TMP_DIR="$(mktemp -d)" || exit 1
-	[ -d "$3" ] || mkdir -p "$3"
-	TGT_DIR="$(cd "$3"; pwd)"
-	cd "$TMP_DIR" && \
-	git init >/dev/null 2>&1 && \
-	git remote add -f origin "$4" >/dev/null 2>&1 && \
-	git checkout "remotes/origin/$1" -- "$2" && \
-	cd "$2" && cp -a . "$TGT_DIR/"
+function git_sparse_clone() {
+branch="$1" rurl="$2" localdir="$3" && shift 3
+git clone -b $branch --depth 1 --filter=blob:none --sparse $rurl $localdir
+cd $localdir
+git sparse-checkout init --cone
+git sparse-checkout set $@
+mv -n $@ ../
+cd ..
+rm -rf $localdir
 }
+
+#第1个参数 分支  第2个参数 仓库地址  第3个参数 本地目录  第4个参数开始 是目标路径 同一个库可多个路径
 
 # unraid icons
 #svn co https://github.com/xushier/HD-Icons/trunk/border-radius icons
@@ -64,7 +64,11 @@ function svn_export() {
 #git_clone https://github.com/gngpp/luci-app-design-config
 
 # nas-packages istoreosx
-svn_export "main" "luci/luci-app-istorex" "luci-app-istorex" "https://github.com/linkease/nas-packages-luci"
+# 网络向导
+#svn_co https://github.com/linkease/nas-packages/trunk/network/services/quickstart
+#svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart
+git_sparse_clone main https://github.com/linkease/nas-packages-luci  istore luci/luci-app-ddnsto luci/luci-app-istorex
+sed -i 's/ +luci-app-store//g' luci-app-quickstart/Makefile
 
 # gdy666/lucky
 git_clone https://github.com/gdy666/luci-app-lucky
@@ -147,11 +151,7 @@ git_clone https://github.com/linkease/istore && mv -n istore/luci/* ./; rm -rf i
 sed -i 's/luci-lib-ipkg/luci-base/g' luci-app-store/Makefile
 
 
-# 网络向导
-#svn_co https://github.com/linkease/nas-packages/trunk/network/services/quickstart
-#svn_co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-quickstart
-svn_export "main" "luci/luci-app-quickstart" "luci-app-quickstart" "https://github.com/linkease/nas-packages-luci"
-sed -i 's/ +luci-app-store//g' luci-app-quickstart/Makefile
+
 
 
 # 实时监控
